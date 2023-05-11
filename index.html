@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>calculater</title>
+    
+
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Castoro+Titling&family=Darumadrop+One&family=Foldit:wght@100&family=Kanit:wght@200&family=Lobster&family=Ubuntu:wght@500&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html{
+            62.5%;
+            
+        }
+        body{
+            background-color: rgba(0,0,0,.6);
+        }
+        h1{
+            font-size: 2.5rem;
+            position: absolute;
+            top:60rem;
+            right:-10rem;
+            
+            width:50rem;
+            color:purple;
+            font-family: 'Ubuntu', sans-serif;
+            
+        }
+        .calculetor{
+          display: flex;
+          position:relative;
+          border: .2rem solid black;
+         display:flex;
+        top:15rem;
+        width: 35rem;
+        height:40rem;
+        left:15rem;
+        background-color:#002233;
+        border-radius: 2rem;
+        }
+        .input1 input{
+            border-radius: 1rem;
+            position: relative;
+            top:2rem;
+           left:2rem;
+           width: 30rem;
+           height:5rem;
+           border:none;
+           background: transparent;
+           box-shadw:0 0  .5rem .5rem white;        
+           
+        }
+       .input1 input::placeholder{
+            color:white;
+            font-size: 3rem;
+            position: relative;
+           left: 25rem;
+           top:1rem;
+        }
+        div input{
+           position: relative;
+           top:10rem;
+           left:-31rem;
+          height:5rem;
+         width: 5rem;
+        display:flex;
+        margin: .7rem;
+        margin-left: 2rem;
+        border-radius: 50rem;
+        background-color: transparent;
+        color: white;
+        font-size: 3rem;
+        
+       
+    }
+      div input.ab{
+          font-size:2rem;
+          position: relative;
+         text-align: center;
+        justify-content: center;
+        display:flex;
+        color:white;
+        border: none;
+      box-shadow:-.8rem -.8rem 1.5rem rgba(255, 255, 255, .2);
+      animation: spin 3s infinite;
+      }
+      @keyframes spin{
+          0%{
+             rotate 0deg;
+              box-shadow:-.8rem -.8rem 1.5rem rgba(255, 0, 0, 20);
+              color:white;
+              
+          }
+          35% {
+              rotate 360deg;
+              box-shadow: -.8rem -.8rem 1.5rem rgba(255, 0, 0, 20);
+              color: white;
+          }
+          40% {
+              rotate 360deg;
+              box-shadow: -.8rem -.8rem 1.5rem rgba(0, 255, 0, 20);
+          color:white;
+          }
+          100% {
+              rotate 360deg;
+              box-shadow: -.8rem -.8rem 1.5rem rgba(0, 0, 255, 20);
+          color:white;
+          }
+      }
+      div input.abc{
+          font-size:2rem;
+          position: relative;
+         text-align: center;
+        justify-content: center;
+        display:flex;
+        color:red;
+        border: none;
+        box-shadow:-.8rem -.8rem 1.5rem rgba(255, 255, 255, .2);
+        animation: rotate 3s infinite;
+        transition: 5.s ease;
+      }
+       @keyframes rotate{
+          0%{
+             rotate 0deg;
+              box-shadow:-.8rem -.8rem 1.5rem rgba(255, 0, 0, 20);
+              color:orange;
+              
+          }
+          35% {
+              rotate 360deg;
+              box-shadow: -.8rem -.8rem 1.5rem rgba(255, 0, 0, 20);
+              color: white;
+          }
+          40% {
+              rotate 360deg;
+              box-shadow: -.8rem -.8rem 1.5rem rgba(0, 255, 0, 20);
+          color:orange;
+          }
+          100% {
+              rotate 360deg;
+              box-shadow: -.8rem -.8rem 1.5rem rgba(0, 0, 255, 20);
+          color:orange;
+          }
+      }
+      
+       @media(max-width:980px){
+           html{
+              font-size: 160%;
+           }
+       }  
+           @media(max-width:480px){
+           html{
+              font-size: 35%;
+           }
+           .calculetor{
+               background-color: ;
+           }
+       }  
+               
+    </style>
+</head>
+<body>
+  <main class="calculetor">
+   <div class="input1">
+    
+    <input type="text"name="show"placeholder="0" id="akash">
+    
+       </div>   
+       
+       
+       
+       <div>
+      <input type="button" value="AC"class="abc"onclick="allclear()">    
+       <input type="button"value="7"class="ab"onClick=change()>
+        <input type="button" value="4"class="ab"onClick=four()>    
+        <input type="button" value="1"class="ab"onClick="one()">  
+                <input type="button" value="00"class="ab" onClick="zero2()">
+        
+       </div>
+       
+       
+       
+       
+              <div>
+      <input type="button" value="DEL"class="abc"onclick="delet()">    
+       <input type="button" value="8"class="ab"onClick="eight()">   
+        <input type="button" value="5"class="ab"onClick="five()">    
+        <input type="button" value="2"class="ab"onClick="two()">    
+                <input type="button" value="0"class="ab"onClick="zero()">  
+       </div>
+       
+       
+              <div>
+      <input type="button" value="%"class="abc"onclick="persentage()">    
+       <input type="button" value="9"class="ab"onClick="nine()">   
+        <input type="button" value="6"class="ab"onClick="six()">    
+        <input type="button" value="3"class="ab"onClick="three()">    
+         <input type="button" value="."class="ab"onclick="point()">  
+       </div>
+      
+      
+             <div>
+      <input type="button" value="/"class="abc"onclick="devide()">    
+       <input type="button" value="*"class="abc"onclick="into()">   
+        <input type="button" value="-"class="abc"onclick="minas()">    
+        <input type="button" value="+"class="abc"onclick="plus()">  
+              <div>
+      <input type="button" value="="class="abc" onclick="sum()">
+      
+                
+       </div>
+       
+        </main> 
+        <h1>DEVOLOPED BY AKASH BISWAS</h1>
+        <script>
+      const change=()=>{
+         document.getElementById('akash').value+='7';
+      }   
+      const four=()=>{
+         document.getElementById('akash').value+='4';
+      }      
+        const one=()=>{
+            document.getElementById('akash').value+='1';
+        }
+        const zero2=()=>{
+         document.getElementById('akash').value+='00'
+        }
+        const eight=()=>{
+            document.getElementById('akash').value+='8';
+        }
+       const five=()=>{
+            document.getElementById('akash').value+='5';
+        }
+        const two=()=>{
+            document.getElementById('akash').value+='2';
+        }
+        
+     const zero=()=>{
+            document.getElementById('akash').value+='0';
+        }
+        const nine=()=>{
+            document.getElementById('akash').value+='9';
+        }
+        const six=()=>{
+            document.getElementById('akash').value+='6';
+        }
+        const three=()=>{
+            document.getElementById('akash').value+='3';
+        }
+        const allclear=()=>{
+            document.getElementById('akash').value='';
+        }
+        const point=()=>{
+            document.getElementById('akash').value+='.';
+        }
+        
+       const into=()=>{
+            document.getElementById('akash').value+='*';
+        }
+        const devide=()=>{
+            document.getElementById('akash').value+='/';
+        }
+        const plus=()=>{
+            document.getElementById('akash').value+='+';
+        }
+        const minas=()=>{
+            document.getElementById('akash').value+='-';
+        }
+             
+             
+        const sum=()=>{
+            document.getElementById('akash').value=eval(document.getElementById('akash').value);
+        }          
+        const delet=()=>{
+ document.getElementById('akash').value=akash.value.slice(0,-1);
+        }    
+            
+        </script>
+</body>
+</html>
